@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Makanan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F0F4F8; /* Soft blue-gray background */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar style */
+    .header {
+      background-color: rgba(0, 86, 179, 0.8);
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .header .search-container {
+      display: flex;
+      align-items: center;
+    }
+    .header input[type="text"] {
+      padding: 5px 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+    }
+    /* Menu Style */
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 kolom per baris */
+      gap: 20px;
+      padding: 20px;
+      background-color: #F0F4F8; /* Match body background */
+    }
+    .menu-item {
+      position: relative;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .menu-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 8px rgba(0, 86, 179, 0.2);
+    }
+    .menu-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .menu-item div {
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: 16px;
+      color: #0056b3;
+    }
+    .menu-item button {
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .menu-item button:hover {
+      background-color: #004494;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Search Bar -->
+  <div class="header">
+    <div>Menu Makanan</div>
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Search..." oninput="searchMenu()">
+    </div>
+  </div>
+
+  <!-- Menu Makanan -->
+  <div class="menu-container" id="menu">
+    <div class="menu-item">
+      <img src="nasigoreng.jpg" alt="Nasi Goreng">
+      <div>Nasi Goreng</div>
+      <button onclick="alert('Menghitung kalori Nasi Goreng')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="ayamgoreng.jpeg" alt="Ayam Goreng">
+      <div>Ayam Goreng</div>
+      <button onclick="alert('Menghitung kalori Ayam Goreng')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="sayurasam.jpg" alt="Sayur Asam">
+      <div>Sayur Asam</div>
+      <button onclick="alert('Menghitung kalori Sayur Asam')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="sateayam.jpeg" alt="Sate Ayam">
+      <div>Sate Ayam</div>
+      <button onclick="alert('Menghitung kalori Sate Ayam')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="bakso.jpg" alt="Bakso">
+      <div>Bakso</div>
+      <button onclick="alert('Menghitung kalori Bakso')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="mieayam.jpeg" alt="Mie Ayam">
+      <div>Mie Ayam</div>
+      <button onclick="alert('Menghitung kalori Mie Ayam')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="susucoklat.jpg" alt="Susu Coklat">
+      <div>Susu Coklat</div>
+      <button onclick="alert('Menghitung kalori Susu Coklat')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="salmon.jpg" alt="Salmon">
+      <div>Salmon</div>
+      <button onclick="alert('Menghitung kalori Salmon')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="yogurt.jpg" alt="Yogurt">
+      <div>Yogurt</div>
+      <button onclick="alert('Menghitung kalori Yogurt')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="nasiuduk.avif" alt="Nasi Uduk">
+      <div>Nasi Uduk</div>
+      <button onclick="alert('Menghitung kalori Nasi Uduk')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="rendang.jpg" alt="Rendang">
+      <div>Rendang</div>
+      <button onclick="alert('Menghitung kalori Rendang')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="burger.jpg" alt="Burger">
+      <div>Burger</div>
+      <button onclick="alert('Menghitung kalori Burger')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="pecel.jpg" alt="Pecel">
+      <div>Pecel</div>
+      <button onclick="alert('Menghitung kalori Pecel')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="soto.jpg" alt="Soto">
+      <div>Soto</div>
+      <button onclick="alert('Menghitung kalori Soto')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="keju.jpeg" alt="Keju">
+      <div>Keju</div>
+      <button onclick="alert('Menghitung kalori Keju')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="brokoli.jpg" alt="Brokoli">
+      <div>Brokoli</div>
+      <button onclick="alert('Menghitung kalori Brokoli')">Count</button>
+    </div>
+    <div class="menu-item">
+      <img src="kentang.jpg" alt="Kentang">
+      <div>Kentang</div>
+      <button onclick="alert('Menghitung kalori Kentang')">Count</button>
+    </div>
+  </div>
+
+  <script>
+    function searchMenu() {
+      var input = document.getElementById("search");
+      var filter = input.value.toUpperCase();
+      var items = document.getElementsByClassName("menu-item");
+
+      for (var i = 0; i < items.length; i++) {
+        var nameDiv = items[i].getElementsByTagName("div")[0];
+        var textValue = nameDiv.textContent || nameDiv.innerText;
+
+        if (textValue.toUpperCase().indexOf(filter) > -1) {
+          items[i].style.display = "";
+        } else {
+          items[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
