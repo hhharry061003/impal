@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CaloriePro - Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <style>
+    body {
+      font-family: Roboto, Arial, sans-serif;
+      background-color: #007bff;
+      margin: 0;
+    }
+    .header {
+      background-color: #0056b3;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+    }
+    .header .logo {
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 50px);
+    }
+    .form-container {
+      width: 400px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003f7f;
+    }
+    .additional-options {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .additional-options a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+    label {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div>CaloriePro</div>
+    <img src="calorielogo.jpg" alt="CaloriePro Logo" class="logo">
+  </div>
+
+  <!-- Login Form -->
+  <div class="container">
+    <div class="form-container">
+      <form id="loginForm">
+        <label for="uname">Username</label>
+        <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+        <label for="psw">Password</label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+        <button type="button" onclick="login()">Login</button>
+
+        <div class="additional-options">
+          <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      var uname = document.getElementById("uname").value;
+      var psw = document.getElementById("psw").value;
+      
+      if (uname && psw) {
+        // Redirect to menumakanan.html if login is successful
+        window.location.href = "halaman.html"; 
+      } else {
+        alert("Please fill in both fields.");
+      }
+    }
+  </script>
+
+</body>
+</html>
